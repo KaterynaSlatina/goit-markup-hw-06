@@ -57,11 +57,38 @@ button {
    border-radius: 4px;
 }
 
+/* Base styles for small devices*/
+
 .container {
-   width: 1158px;
+   min-width: 396px;
+   max-width: 428px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+
+
+/* Tablet screen */
+
+@media screen and (min-width: 768px) {
+   .container {
+      max-width: 768px;
+
+   }
+}
+
+/* Desctop screen */
+
+@media screen and (min-width: 1200px) {
+.container {
+   max-width: 1158px;
    margin: 0 auto;
    padding: 0 15px;
 }
+}
+
+
 
 .header-container {
    display: flex;
@@ -234,15 +261,91 @@ margin-left: auto;
 
 }
 
+
+/* Advantages */
+
 .advantages {
+   padding: 96px 0px;
+
+   /* padding: 120px 0; */
+}
+
+@media screen and (min-width: 768px) {
+   .advantages {
+   
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .advantages {
    padding: 120px 0;
+   }
 }
 
-.advantages-list {
+/* .list-section-two {
+   display: flex;
+   gap: 24px;
+} */
+
+@media only screen and (min-width: 768px) {
+   .list-section-two {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      
+   }
+}
+
+
+@media only screen and (max-width: 767px) {
+   .advantages-list:not(:last-child) {
+      margin-bottom: 72px;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .advantages-list {
+      flex-basis: calc((100% - 24px) / 2);
+      padding-bottom: 72px;
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+  .advantages-list {
    width: calc((100% - 72px) / 4);
+   gap: 24px;
+}
 }
 
-.advantages-icon {
+@media only screen and (min-width: 1200px) {
+   .advantages-list {
+      flex-basis: calc((100% - 3 * 24px) / 4);
+          
+   }
+      
+}
+
+@media only screen and (max-width: 1199px) {
+   .adv-icon-background{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+   }
+   
+
+      
+}
+
+
+/* .advantages-icon {
 
 width: 64px;
 height: 64px;
@@ -259,7 +362,7 @@ width: 264px;
 height: 112px;
 border-radius: 4px;
 margin-bottom: 8px;
-}
+} */
 
 
  .header-title {
@@ -327,10 +430,7 @@ margin-bottom: 8px;
    padding-bottom: 120px;
 }
 
-.list-section-two {
-   display: flex;
-   gap: 24px;
-}
+
 
 .list-section-three {
    display: flex;
