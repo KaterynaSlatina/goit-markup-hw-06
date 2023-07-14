@@ -263,14 +263,14 @@ margin-left: auto;
 
 
 .hero {
-    background-color: var(--main-color);
-    padding: 188px 0;
+   background-color: var(--main-color);
+   padding: 188px 0;
    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/people-office.jpg);
    background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-  max-width: 1440px;
-  margin: 0 auto;
+   background-position: center;
+   background-size: cover;
+   max-width: 1440px;
+   margin: 0 auto;
 
  }
 
@@ -278,10 +278,12 @@ margin-left: auto;
     color: var(--inner-color);
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 36px;
+    /* font-size: 56px; */
     line-height: 1.07;
    letter-spacing: 0.02em;
-   max-width: 496px;
+   width: 320px;
+   /* max-width: 496px; */
    margin: 0 auto;
    margin-bottom: 48px;
   
@@ -368,17 +370,11 @@ margin-left: auto;
 
 @media only screen and (min-width: 1158px) {
   .advantages-list {
-   width: calc((100% - 72px) / 4);
+   flex-basis: calc((100% - 72px) / 4);
    gap: 24px;
- 
+ width: 356px;
 }
 }
-/* 
-@media only screen and (min-width: 1158px) {
-   .advantages-list {
-      flex-basis: calc((100% - 3 * 24px) / 4);
-          
-   } */
       
 @media (max-width: 1157px) {
 .advantages-icon {
