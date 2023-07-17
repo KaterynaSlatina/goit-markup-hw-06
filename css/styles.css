@@ -262,8 +262,6 @@ font-size: 12px;
    .address-list {
      flex-direction: column;
      gap: 12px;
-     padding-top: 16px;
-     padding-bottom: 16px;
    }
 }
 
@@ -337,16 +335,16 @@ font-size: 12px;
     /* font-size: 56px; */
     line-height: 1.07;
    letter-spacing: 0.02em;
-   width: 320px;
-   /* max-width: 496px; */
+   max-width: 320px;
    margin: 0 auto;
    margin-bottom: 48px;
+   text-align: center;
  }
 @media only screen and (min-width:768px) {
    .hero-title {
    font-size: 56px;
    margin-bottom: 36px;
-   width: 496px;
+   max-width: 496px;
    }
 }
 
@@ -415,7 +413,8 @@ font-size: 12px;
    .list-section-two {
       display: flex;
       flex-wrap: wrap;
-      gap: 24px;
+      row-gap: 72px;
+      column-gap: 24px;
       
    }
 }
@@ -512,6 +511,13 @@ font-size: 12px;
    color: var(--text-color);
    line-height: 1.5;
    gap: 24px;
+   font-weight: 500;
+}
+
+@media only screen and (min-width: 1157px) {
+   .text {
+      font-weight: 400;
+   }
 }
 
 .our-team-text {
@@ -538,7 +544,8 @@ font-size: 12px;
 
 @media only screen and (min-width: 1158px) {
    .section-title-index {
-      padding-top: 120px;
+      padding-top: 0;
+      
    }
 }
 
@@ -555,6 +562,8 @@ font-size: 12px;
 .what-are-we-doing {
    padding-bottom: 120px;
 }
+
+
 
 @media only screen and (max-width: 1157px) {
    .what-are-we-doing {
@@ -586,7 +595,8 @@ font-size: 12px;
      justify-content: center;
       margin: 0 auto;
       /* width: calc((100%-24px)/2);  */
-      gap: 24px;
+      column-gap: 24px;
+      row-gap: 64px;
    }
 }
 
@@ -621,8 +631,14 @@ width: 360px;
 .section-our-team {
    background-color: var(--footer-color);
 padding-bottom: 96px;
-   /* padding: 120px 0; */
 }
+
+@media only screen and (min-width: 1158px) {
+   .section-our-team {
+   padding: 120px 0;
+   }
+}
+
 
 .list-our-team {
    background-color: var(--inner-color);
@@ -637,14 +653,7 @@ padding-bottom: 96px;
 @media only screen and (min-width: 768px) {
    .list-our-team {
       margin: 0;
-   margin-bottom: 64px;
-   }
-}
-
-
-@media only screen and (min-width: 1158px) {
-   .list-our-team {
-      margin-bottom: 120px;
+   /* margin-bottom: 64px; */
    }
 }
 
@@ -819,6 +828,12 @@ font-size: 16px;
 .clients {
 /* padding: 120px 0; */
 }
+
+@media only screen and (min-width: 1158px) {
+   .clients {
+         padding: 120px 0;
+      }
+}
  
 
  .clients-list {
@@ -832,7 +847,8 @@ padding-bottom: 96px;
 @media only screen and (max-width: 767px) {
    .clients-list {
    width: calc((100%-16px)/2);
-   gap: 16px;
+   row-gap: 72px;
+   column-gap: 16px;
    }
 }
 
@@ -951,6 +967,13 @@ width: calc((100%-24px)/2);
    }
 }
 
+@media only screen and (min-width: 1158px) {
+   .footer-container-text {
+         /* justify-content: space-between; */
+      }
+}
+
+
 .footer {
    background-color: var(--main-color);
    padding: 100px 0;
@@ -1007,7 +1030,20 @@ margin-top: 72px;
 @media only screen and (min-width: 768px) {
    .footer-container-social {
       margin-left: 24px;
+      margin-top: 0;
    }
+}
+
+@media only screen and (min-width: 1158px) {
+   .footer-container-social {
+   margin-left: 0;
+   margin-right: 80px;
+   }
+
+      .footer-content {
+         margin-right: 120px;
+      }
+
 }
 
 .footer-content {
@@ -1061,6 +1097,7 @@ margin-top: 72px;
 @media only screen and (min-width: 768px) {
    .footer-container-subscribe {
       padding-left: 0;
+      margin-top: 0;
    }
 }
 
@@ -1165,7 +1202,7 @@ padding: 72px 24px 24px 24px;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  min-height: 584px;
+  /* min-height: 584px; */
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--modal-window-color);
   border-radius: 4px;
@@ -1263,7 +1300,7 @@ position: relative;
 
 display: block;
 margin-bottom: 4px;
-width: 360px;
+max-width: 360px;
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
@@ -1445,8 +1482,8 @@ text-decoration: underline;
    position: fixed;
    top: 0;
    left: 0;
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
    padding: 80px 56px 40px 40px;
    background-color: var(--inner-color);
    z-index: 999;
@@ -1488,6 +1525,12 @@ color: var(--main-color);
    line-height: 1.11;
    letter-spacing: 0.72px;
 }
+@media only screen and (max-width: 767px) {
+   .mobile-active {
+    color: var(--hover-color);
+   }
+}
+
 
 .mobile-address {
 
@@ -1497,7 +1540,7 @@ color: var(--main-color);
    display: flex;
    flex-direction: column;
    gap: 40px;
-   margin-top: 284px;
+   margin-top: auto;
    margin-bottom: 48px;
   
 }
