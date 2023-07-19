@@ -268,7 +268,8 @@ font-size: 12px;
 @media only screen and (min-width: 1158px) {
    .address-list {
       flex-direction: row;
-      align-items: center
+      align-items: center;
+      gap: 40px;
    }
 }
 
@@ -310,7 +311,8 @@ font-size: 12px;
    .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/people-office-desk@1x.jpg);
    }
-   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+   
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
    .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/people-office-desc@2x.jpg);
          }
@@ -855,8 +857,7 @@ padding-bottom: 96px;
 @media only screen and (min-width: 768px) {
    .clients-list {
       width: calc((100%-24px)/3);
-      gap: 24px;
-      padding-bottom: 96px;
+      gap: 72px 24px;
    }
 }
 
@@ -876,7 +877,8 @@ padding-bottom: 96px;
 
  .clients-link {
 display: flex;
-width: 168px;
+width: 190px;
+
 height: 88px;
 justify-content: center;
 align-items: center;
@@ -887,6 +889,12 @@ fill: var(--customers-color);
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
+
+@media only screen and (min-width: 768px) {
+   .clients-link {
+      width: 168px;
+   }
+}
 
  .clients-link:hover,
  .clients-link:focus  {
@@ -964,6 +972,7 @@ width: calc((100%-24px)/2);
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
    .footer-container-text {
       padding-left: 108px;
+      gap: 72px 24px;
    }
 }
 
